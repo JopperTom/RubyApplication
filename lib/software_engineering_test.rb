@@ -1,6 +1,8 @@
 
 class SoftwareEngineeringTest
   
+  attr_accessor :slist, :cnt
+  
   # Let S be the set of numbers greater than zero and less than 100,000
   # that are evenly divisible by 19.
   def initialize
@@ -14,7 +16,7 @@ class SoftwareEngineeringTest
   
   # How many numbers are there in S?
   def slist_ordinal
-    slist.count
+    @cnt = slist.count
   end
   
    # How many numbers in S have a square that ends in a 1?    
@@ -30,11 +32,11 @@ class SoftwareEngineeringTest
     slist.each do |s1|
         slist.each do |s2|
           if (s1.to_s.reverse!.eql? s2.to_s )
-            "count++"
+          # "count++"
           end
         end
     end
-  return ("count = count/2")
+  # return ("count = count/2")
   end
   
  # How many numbers in S can be multiplied by some other number in S to produce 
@@ -44,11 +46,11 @@ class SoftwareEngineeringTest
         slist.each do |s2|
           slist.each do |s3|
             if ( (s2 * s3) == s1 )
-              "count++"
+            #  "count++"
             end
         end
       end
-      return ("count = count/2")
+      # return ("count = count/2")
     end
   end  
 end
