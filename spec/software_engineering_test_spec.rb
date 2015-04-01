@@ -9,9 +9,14 @@ describe SoftwareEngineeringTest do
     @se_test = SoftwareEngineeringTest.new
   end
 
+describe "#new" do
+    # each value should be divisible by 19
+    @se_test.should be_an_instance_of SoftwareEngineeringTest 
+  end
+
   it "@slist" do
     # each value should be divisible by 19
-    @slist.each { |i|  }.divisible_by_19?.should be_true 
+    slist.each { |i|  }.divisible_by_19?.should be_true 
   end
   
 it "@slist" do
