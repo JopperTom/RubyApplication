@@ -5,16 +5,28 @@
 require 'software_engineering_test'
 
 describe SoftwareEngineeringTest do
-  before(:each) do
-    @software_engineering_test = SoftwareEngineeringTest.new
+  before(:all) do
+    @se_test = SoftwareEngineeringTest.new
   end
 
-  it "slist" do
+  it "@slist" do
     # each value should be divisible by 19
+    @slist.each { |i|  }.divisible_by_19?.should be_true 
   end
   
-  it "slist" do
+it "@slist" do
+    # each value should be less than 10,000
+    @slist.each { |i|  }.less_than_10000?.should be_true 
+  end
+  
+  it "@slist" do
+    # each value should be greater than 0
+    @slist.each { |i|  }.greater_than_0?.should be_true 
+  end
+
+it "@slist" do
     # each value should be unique
+    @slist.each { |i|  }.unique?.should be_true 
   end
   
   it "slist" do
